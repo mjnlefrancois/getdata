@@ -47,11 +47,12 @@ SITTING   | 2       | 0.54      | 0.01      | ... | ...       |
     + ```Mag``` is included in the variable name if the measurement is in fact the magnitude of the three-dimensional signals
   + The activity data (```ytrain``` & ```ytest```) was named "Activity"
   + The subject data (```subtrain``` & ```subtest```) was named "Subject"
-2. The training and test data were merged separately in the order: Subject, Activity, Features.
-3. A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data.
+2. The training and test data were merged separately in the order Subject, Activity, Features using the ```cbind()``` function. The training dataset (```train```) comprised 7,352 observations and 563 variables. The test dataset (```test```) comprised 2,947 observations and 563 variables.
+3. A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data. This dataset comprised 10,299 observations and 68 variables.
 4. To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column. For example, the factor integer ```1``` was converted to ```WALKING``` as in the ```activity_labels.txt``` file.
 
-### Step 3: Select appropriate variables
+### Step 3: Select appropriate variables  
+The objective of this step was to extract the relevant columns from the ```combined``` data frame and summarize the data. Relevant variables included Subject, Activity, and Features that have both mean and standard deviation (to perform basic statistical analysis).  
 1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined```. Hence, these were identified using the ```duplicated()``` command for the column names of ```combined```: ```names(combined)```. We see that none of these columns contain the means or standard deviations of the measurements.
 2. Hence, these were removed by subsetting the ```combined``` data frame for columns which did not contain duplicated names using the standard ```[``` and ```]``` operators . We obtain a data frame that may then be manipulated using ```select()```.
 3. Relevant columns are then selected from ```combined```. The columns selected were:
