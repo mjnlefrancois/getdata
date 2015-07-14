@@ -7,5 +7,5 @@ Only the [```dplyr```](http://cran.r-project.org/web/packages/dplyr/index.html) 
 
 ### Overview
 This script performs the following functions in the order listed:  
-1. Create a vector of features from ```features.txt```
+1. Create a vector of features from ```features.txt```  
 2. Create a vector of activities from ```activity_labels.txt```
