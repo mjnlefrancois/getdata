@@ -39,7 +39,7 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
   + The subject data (```subtrain``` & ```subtest```) was named "Subject"
 2. The training and test data were merged separately in the order: Subject, Activity, Features.
 3. A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data.
-4. To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column.
+4. To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column. For example, the integer ```1``` was converted to ```WALKING```.
 
 ### Step 3: Select appropriate variables
 1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined```. Hence, these were identified using the ```duplicated()``` command for the column names of ```combined```: ```names(combined)```. We see that none of these columns contain the means or standard deviations of the measurements.
