@@ -17,7 +17,7 @@ This script performs the following functions in the order listed:
 
 ### Step 1: Import relevant data
 * The ```write.table()``` function was used to import all files, which were ```.txt``` files
-* The following data was imported from the corresponding files shown in the table below:  
+* The following data was imported from the corresponding files shown in the table below:
 
        Data        |       File         | Object(s)
 ------------------ | ------------------ | ---------
@@ -28,7 +28,9 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 
 ### Step 2: Combine Data
 * The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly
-  + The variables in (```Xtrain``` & ```Xtest```) were named by feature (in the ```features``` object)
+  + The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object)
   + The activity data (```ytrain``` & ```ytest```) was named "Activity"
   + The subject data (```subtrain``` & ```subtest```) was named "Subject"
-* The training and test data was merged separately in the order: Subject, Activity, Features
+* The training and test data were merged separately in the order: Subject, Activity, Features
+* A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data
+* To rename
