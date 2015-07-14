@@ -37,7 +37,7 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 
 ### Step 3: Select appropriate variables
 1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined```. Hence, these were identified using the ```duplicated()``` command for the column names of ```combined```: ```names(combined)```. We see that none of these columns contain the means or standard deviations of the measurements.
-2. Hence, these were removed by subsetting the ```combined``` data frame using the ```[``` and ```]``` operators for columns which did not contain duplicated names. We obtain a data frame that may then be manipulated using ```select()```.
+2. Hence, these were removed by subsetting the ```combined``` data frame for columns which did not contain duplicated names using the standard ```[``` and ```]``` operators . We obtain a data frame that may then be manipulated using ```select()```.
 3. Relevant columns are then selected from ```combined```. These include:
   * Subject
   * Activity
