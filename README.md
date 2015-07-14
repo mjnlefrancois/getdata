@@ -19,7 +19,7 @@ This script performs the following functions in the order listed:
 ## Detailed Explanation
 
 ### Step 1: Import relevant data
-* The ```write.table()``` function was used to import all files, which were ```.txt``` files.
+* The ```read.table()``` function was used to import all files, which were ```.txt``` files.
 * The following data was imported from the corresponding files shown in the table below:
 
        Data        |       File         | Object(s)
@@ -52,7 +52,7 @@ SITTING   | 2       | 0.54      | 0.01      | ... | ...       |
   + The subject data (```subtrain``` & ```subtest```) was named "Subject"
 2. The training and test data were merged separately in the order Subject, Activity, Features using the ```cbind()``` function. The training dataset (```train```) comprised 7,352 observations and 563 variables. The test dataset (```test```) comprised 2,947 observations and 563 variables.
 3. A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data. This dataset comprised 10,299 observations and 68 variables.
-4. To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column. For example, the factor integer ```1``` was converted to ```WALKING``` as in the ```activity_labels.txt``` file.
+4. To use descriptive activity names to name the activities in the data set, the Activity column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column. For example, the factor integer ```1``` was converted to ```WALKING``` as in the ```activity_labels.txt``` file.
 
 ### Step 3: Select appropriate variables  
 The objective of this step was to extract the relevant columns from the ```combined``` data frame and summarize the data. Relevant variables included Subject, Activity, and Features that have both mean and standard deviation (to perform basic statistical analysis).  
