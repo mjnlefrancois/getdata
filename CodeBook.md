@@ -1,10 +1,10 @@
 # CodeBook  
 
 ## Introduction  
-This file provides a brief description of the ```averages.txt``` dataset. This dataset contains summarized data from a study on human activity recognition involving 30 volunteers performing 6 activities. Raw data on the 3-axial linear acceleration and 3-axial angular velocity obtained from the recording device, a Samsung Galaxy S II, and were processed and compiled in a several data files. This data was then collated and summarized into the ```averages.txt``` dataset.
+This file provides a brief description of the ```averages.txt``` dataset. This dataset contains summarized data from a study on human activity recognition involving 30 volunteers performing 6 activities. Raw data on the 3-axial linear acceleration and 3-axial angular velocity was recorded using a Samsung Galaxy S II, processed and saved in several data files. This data was then collated and summarized into the ```averages.txt``` dataset.
 
 ## Dataset Structure
-The ```averages``` dataset comprises 180 observations and 68 variables. The observations comprise each of 6 activities for each of the 30 participants
+The ```averages``` dataset comprises 180 observations and 68 variables. The observations comprise each of 6 activities for each of the 30 participants. The variables comprise 2 identifying variables (```Subject``` and ```Activity```), and 66 measurement variables.
 
 ## Feature Variables  
 
