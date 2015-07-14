@@ -22,7 +22,7 @@ This script performs the following functions in the order listed:
        Data        |       File         | Object(s)
 ------------------ | ------------------ | ---------
 Variable names     | ```features.txt``` | ```features```
-Activity labels    | ```activity_labels.txt* | ```activities```
+Activity labels    | ```activity_labels.txt``` | ```activities```
 Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt``` | ```Xtrain```, ```ytrain``` & ```subtrain```
 Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt``` | ```Xtest```, ```ytest``` & ```subtest```
 
