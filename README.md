@@ -41,6 +41,7 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 3. Relevant columns are then selected from ```combined```. These include:
   * Subject
   * Activity
-  * All columns that contain the word "mean" to represent measurement means - this is case sensitive to ensure that other irrelevant variables are not included
-  * All columns that contain the word "std" to represent measurement standard deviations
-  * Excluding columns that contain the word "Freq" to avoid selecting columns containing the ```meanFreq()``` of measurements
+  * ```contains("mean", ignore.case = FALSE)```: All columns that contain the word "mean" to represent measurement means - this is case sensitive to ensure that other irrelevant variables are not included
+  * ```contains("std")```: All columns that contain the word "std" to represent measurement standard deviations
+  * ```-contains("Freq")```: Excluding columns that contain the word "Freq" to avoid selecting columns containing the ```meanFreq()``` of measurements
+4. For aesthetic purposes, the brackets ```()``` in the variable names were removed using the ```gsub``` function: ```gsub("\\(|\\)", "", colnames(combined))```
