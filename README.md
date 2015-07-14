@@ -1,4 +1,9 @@
 # ReadMe file for run_analysis.R
 
-## Required packages
+## Introduction
+
+### Required packages
 Only the dplyr package is required for this script.
+
+### Overview
+
