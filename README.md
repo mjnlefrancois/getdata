@@ -16,7 +16,7 @@ This script performs the following functions in the order listed:
 ## Detailed Explanation
 
 ### Step 1: Import relevant data
-* The ```write.table()``` function was used to import all files, which were ```.txt``` files  
+* The ```write.table()``` function was used to import all files, which were ```.txt``` files
 * The following data was imported from the corresponding files shown in the table below:  
 
        Data        |       File         | Object(s)
