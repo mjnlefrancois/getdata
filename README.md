@@ -8,5 +8,15 @@ Only the [```dplyr```](http://cran.r-project.org/web/packages/dplyr/index.html) 
 ### Overview
 This script performs the following functions in the order listed:
   
-1. Import variable and activity names from ```features.txt``` and ```activity_labels.txt```  
-2. Import training data and test data (excluding files inside the ```Inertial Signals``` folders)
+1. Import variable and activity names  
+2. Import training and test data  
+3. Combine and rename columns for training and test data  
+4. Select appropriate variables  
+5. Create final dataset  
+
+## Detailed Explanation
+
+### Step 1: Import variable and activity names
+* Variable names were imported from the file ```features.txt``` using the ```write.table()``` function  
+* Activity names were imported from the file ```activity_labels.txt``` using the ```write.table()``` function  
+* 
