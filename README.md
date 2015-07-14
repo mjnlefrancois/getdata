@@ -26,7 +26,8 @@ Activity labels    | ```activity_labels.txt``` | ```activities```
 Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt``` | ```Xtrain```, ```ytrain``` & ```subtrain```
 Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt``` | ```Xtest```, ```ytest``` & ```subtest```
 
-### Step 2: Combine Data
+### Step 2: Combine Data  
+The objective of this step was to create a combined data frame containing all variables from the subject datasets (```subtrain``` & ```subtest```), activity datasets (```ytrain``` & ```ytest```) and feature datasets (```Xtrain``` & ```Xtest```).
 1. The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly:
   + The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object). The variable naming conventions are as follows:
     + ```t``` represents the time domain and ```f``` represents the frequency domain
