@@ -8,15 +8,23 @@ Only the [```dplyr```](http://cran.r-project.org/web/packages/dplyr/index.html) 
 ### Overview
 This script performs the following functions in the order listed:
   
-1. Import variable and activity names  
-2. Import training and test data  
-3. Combine and rename columns for training and test data  
-4. Select appropriate variables  
-5. Create final dataset  
+1. Import relevant data 
+2. Combine and rename columns for training and test data  
+3. Select appropriate variables  
+4. Create final dataset  
 
 ## Detailed Explanation
 
-### Step 1: Import variable and activity names
-* Variable names were imported from the file ```features.txt``` using the ```write.table()``` function  
-* Activity names were imported from the file ```activity_labels.txt``` using the ```write.table()``` function  
-* 
+### Step 1: Import relevant data
+* The ```write.table()``` function was used to import all files, which were ```.txt``` files  
+* The following data was imported from the corresponding files shown in the table below:  
+
+       Data        |       File
+------------------ | ------------------
+Variable names     | ```features.txt```
+Activity labels    | ```activity_labels.txt```
+Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt```
+Test data          | 
+
+### Step 2: Import training and test data
+
