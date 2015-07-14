@@ -16,7 +16,7 @@ This script performs the following functions in the order listed:
 ## Detailed Explanation
 
 ### Step 1: Import relevant data
-* The ```write.table()``` function was used to import all files, which were ```.txt``` files
+* The ```write.table()``` function was used to import all files, which were ```.txt``` files.
 * The following data was imported from the corresponding files shown in the table below:
 
        Data        |       File         | Object(s)
@@ -27,13 +27,13 @@ Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt
 Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt``` | ```Xtest```, ```ytest``` & ```subtest```
 
 ### Step 2: Combine Data
-1. The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly
+1. The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly:
   + The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object)
   + The activity data (```ytrain``` & ```ytest```) was named "Activity"
   + The subject data (```subtrain``` & ```subtest```) was named "Subject"
-2. The training and test data were merged separately in the order: Subject, Activity, Features
-3. A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data
-4. To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column
+2. The training and test data were merged separately in the order: Subject, Activity, Features.
+3. A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data.
+4. To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column.
 
 ### Step 3: Select appropriate variables
 1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined```. Hence, these were identified using the ```duplicated()``` command for the column names of ```combined```: ```names(combined)```. We see that none of these columns contain the means or standard deviations of the measurements.
