@@ -8,6 +8,5 @@ Only the [```dplyr```](http://cran.r-project.org/web/packages/dplyr/index.html) 
 ### Overview
 This script performs the following functions in the order listed:
   
-1. Create a vector of features from ```features.txt```  
-2. Create a vector of activities from ```activity_labels.txt```  
-3. 
+1. Import variable and activity names from ```features.txt``` and ```activity_labels.txt```  
+2. Import training data and test data (excluding files inside the ```Inertial Signals``` folders)
