@@ -38,7 +38,7 @@ SITTING   | 2       | 0.54      | 0.01      | ... | ...       |
   
 #### Procedure:
 1. The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly:
-  + The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object). The variables were intuitively named using the following conventions:
+  + The variables in ```Xtrain``` & ```Xtest``` were given intuitive names from the ```features``` object. The conventions are listed below:
     + ```t``` represents the time domain and ```f``` represents the frequency domain
     + ```Body```/```Gravity``` represents the type of signal recorded (from body and gravity, respectively)
     + ```Acc``` and ```Gyro``` represent the source of the signal (from the accelerator and the gyroscope, respectively)
