@@ -28,7 +28,8 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 
 ### Step 2: Combine Data
 1. The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly:
-  + The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object)
+  + The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object). The variable naming conventions are as follows:
+    + Test 
   + The activity data (```ytrain``` & ```ytest```) was named "Activity"
   + The subject data (```subtrain``` & ```subtest```) was named "Subject"
 2. The training and test data were merged separately in the order: Subject, Activity, Features.
