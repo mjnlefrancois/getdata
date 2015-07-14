@@ -28,9 +28,12 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 
 ### Step 2: Combine Data
 * The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly
-  + The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object)
-  + The activity data (```ytrain``` & ```ytest```) was named "Activity"
-  + The subject data (```subtrain``` & ```subtest```) was named "Subject"
+  1. The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object)
+  2. The activity data (```ytrain``` & ```ytest```) was named "Activity"
+  3. The subject data (```subtrain``` & ```subtest```) was named "Subject"
 * The training and test data were merged separately in the order: Subject, Activity, Features
 * A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data
-* To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the character strings in ```activity_labels.txt``` to the factors in that column
+* To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column
+
+### Step 3: Select appropriate variables
+
