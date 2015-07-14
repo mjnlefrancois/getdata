@@ -29,7 +29,7 @@ Activity labels    | ```activity_labels.txt``` | ```activities``` (character)
 Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt``` | ```Xtrain```, ```ytrain``` & ```subtrain``` (data frames)
 Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt``` | ```Xtest```, ```ytest``` & ```subtest``` (data frames)
 
-### Step 2: Combine Data  
+### Step 2: Combine data  
 The objective of this step was to create a combined data frame containing all variables from the subject datasets (```subtrain``` & ```subtest```), activity datasets (```ytrain``` & ```ytest```) and feature datasets (```Xtrain``` & ```Xtest```), in that order. The data frame would have descriptive names for each variable (especially the features), and descriptive names for the various activities. It will adopt a wide form, as shown in the table below:  
 
 Activity  | Subject | Feature1  | Feature2  | ... | FeatureN  |
