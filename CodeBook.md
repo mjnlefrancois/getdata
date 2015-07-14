@@ -1,7 +1,19 @@
 # CodeBook  
 
 ## Introduction  
-This file 
+This file provides a brief description of the naming conventions used for the variables in the final output of the script, ```run_analysis.R```.
+
+## Naming Conventions
+Convention    |   Description
+------------- | --------------
+```t```       | *Time* domain signals
+```f```       | *Frequency* domain signals
+```Body```    | *Body* type signals
+```Gravity``` | *Gravity* type signals 
+```Acc```     | Signals from the *accelerometer*
+```Gyro```    | Signals from the *gyroscope*
+```Jerk```    | 
+
 Activity
 Subject
 tBodyAcc-mean-X
