@@ -40,7 +40,7 @@ Convention    |   Description                     | Category        |
 ```Y```       | Signals in the *Y* direction      | Direction       |
 ```Z```       | Signals in the *Z* direction      | Direction       |
 ```Jerk```    | *Jerk* signals                    | Other           |
-```Mag```     | Magnitude of signal               | Other           |
+```Mag```     | Euclidean magnitude of signal     | Other           |
 ```Mean```    | Mean of measurement               | Statistic       |
 ```Std```     | Standard deviation of measurement | Statistic       |
 > NOTE: In simple terms, domain refers to the X-axis on a graph. Data in the time domain (```t```) can be converted to data in the frequency domain (```f```) using the Fast Fourier Transform(FFT).
@@ -49,72 +49,74 @@ Convention    |   Description                     | Category        |
 ### Descriptions
 The feature variables are averages of each variable for each activity and each subject. They are normalized and bounded within $[-1, 1]$. The full descriptions of each variable are listed in the table below:
 
-Variable                | Description                                               |
------------------------ | --------------------------------------------------------- |
-tBodyAccMeanX           | Mean X-axis body acceleration (time domain)               |
-tBodyAccMeanY           | Mean Y-axis body acceleration (time domain)               |
-tBodyAccMeanZ           | Mean Z-axis body acceleration (time domain)               |
-tGravityAccMeanX        | Mean X-axis gravity acceleration (time domain)            |
-tGravityAccMeanY        | Mean Y-axis gravity acceleration (time domain)            |
-tGravityAccMeanZ        | Mean Z-axis gravity acceleration (time domain)            |
-tBodyAccJerkMeanX       | Mean X-axis body acceleration Jerk (time domain)          |
-tBodyAccJerkMeanY       | Mean Y-axis body acceleration Jerk (time domain)          |
-tBodyAccJerkMeanZ       | Mean Z-axis body acceleration Jerk (time domain)          |
-tBodyGyroMeanX          | Mean X-axis body angular velocity (time domain)           |
-tBodyGyroMeanY          | Mean Y-axis body angular velocity (time domain)           |
-tBodyGyroMeanZ          | Mean Z-axis body angular velocity (time domain)           |
-tBodyGyroJerkMeanX      | Mean X-axis body angular velocity Jerk (time domain)      |
-tBodyGyroJerkMeanY      | Mean Y-axis body angular velocity Jerk (time domain)      |
-tBodyGyroJerkMeanZ      | Mean Z-axis body angular velocity Jerk (time domain)      |
-tBodyAccMagMean         | Mean magnitude of body acceleration (time domain)         |
-tGravityAccMagMean      | Mean magnitude of gravity acceleration (time domain)      |
-tBodyAccJerkMagMean     | Mean magnitude of body acceleration Jerk (time domain)    |
-tBodyGyroMagMean        | Mean magnitude of body angular velocity (time domain)     |
-tBodyGyroJerkMagMean    | Mean magnitude of body angular velocity Jerk (time domain)|
-fBodyAccMeanX           | Mean of body acceleration frequency signal (X-axis)       |
-fBodyAccMeanY           | Mean of body acceleration frequency signal (Y-axis)       |
-fBodyAccMeanZ           | Mean of body acceleration frequency signal (Z-axis)       |
-fBodyAccJerkMeanX       | Mean of body acceleration Jerk frequency signal (X-axis)  |
-fBodyAccJerkMeanY       | Mean of body acceleration Jerk frequency signal (Y-axis)  |
-fBodyAccJerkMeanZ       | Mean of body acceleration Jerk frequency signal (Z-axis)  |
-fBodyGyroMeanX          | Mean of body angular velocity frequency signal (X-axis)   |
-fBodyGyroMeanY          | Mean of body angular velocity frequency signal (Y-axis)   |
-fBodyGyroMeanZ          | Mean of body angular velocity frequency signal (Z-axis)   |
-fBodyAccMagMean         | Mean magnitude of body acceleration 
-fBodyAccJerkMagMean     | 
-fBodyGyroMagMean        | 
-fBodyGyroJerkMagMean    | 
-tBodyAccStdX            | 
-tBodyAccStdY            | 
-tBodyAccStdZ            | 
-tGravityAccStdX         | 
-tGravityAccStdY
-tGravityAccStdZ
-tBodyAccJerkStdX
-tBodyAccJerkStdY
-tBodyAccJerkStdZ
-tBodyGyroStdX
-tBodyGyroStdY
-tBodyGyroStdZ
-tBodyGyroJerkStdX
-tBodyGyroJerkStdY
-tBodyGyroJerkStdZ
-tBodyAccMagStd
-tGravityAccMagStd
-tBodyAccJerkMagStd
-tBodyGyroMagStd
-tBodyGyroJerkMagStd
-fBodyAccStdX
-fBodyAccStdY
-fBodyAccStdZ
-fBodyAccJerkStdX
-fBodyAccJerkStdY
-fBodyAccJerkStdZ
-fBodyGyroStdX
-fBodyGyroStdY
-fBodyGyroStdZ
-fBodyAccMagStd
-fBodyAccJerkMagStd
-fBodyGyroMagStd
-fBodyGyroJerkMagStd
+Variable                | Description                                     
+----------------------- | -------------------------------------------
+tBodyAccMeanX           | Mean X-axis body acceleration (time domain)
+tBodyAccMeanY           | Mean Y-axis body acceleration (time domain)
+tBodyAccMeanZ           | Mean Z-axis body acceleration (time domain)
+tGravityAccMeanX        | Mean X-axis gravity acceleration (time domain)
+tGravityAccMeanY        | Mean Y-axis gravity acceleration (time domain)
+tGravityAccMeanZ        | Mean Z-axis gravity acceleration (time domain)
+tBodyAccJerkMeanX       | Mean X-axis body acceleration jerk (time domain)
+tBodyAccJerkMeanY       | Mean Y-axis body acceleration jerk (time domain)
+tBodyAccJerkMeanZ       | Mean Z-axis body acceleration jerk (time domain)
+tBodyGyroMeanX          | Mean X-axis body angular velocity (time domain)
+tBodyGyroMeanY          | Mean Y-axis body angular velocity (time domain)
+tBodyGyroMeanZ          | Mean Z-axis body angular velocity (time domain)
+tBodyGyroJerkMeanX      | Mean X-axis body angular velocity jerk (time domain)
+tBodyGyroJerkMeanY      | Mean Y-axis body angular velocity jerk (time domain)
+tBodyGyroJerkMeanZ      | Mean Z-axis body angular velocity jerk (time domain)
+tBodyAccMagMean         | Mean Euclidean magnitude of body acceleration (time domain)
+tGravityAccMagMean      | Mean Euclidean magnitude of gravity acceleration (time domain)
+tBodyAccJerkMagMean     | Mean Euclidean magnitude of body acceleration jerk (time domain)
+tBodyGyroMagMean        | Mean Euclidean magnitude of body angular velocity (time domain)
+tBodyGyroJerkMagMean    | Mean Euclidean magnitude of body angular velocity jerk (time domain)
+fBodyAccMeanX           | Mean X-axis body acceleration (frequency domain)
+fBodyAccMeanY           | Mean Y-axis body acceleration (frequency domain)
+fBodyAccMeanZ           | Mean Z-axis body acceleration (frequency domain)
+fBodyAccJerkMeanX       | Mean X-axis body acceleration jerk (frequency domain)
+fBodyAccJerkMeanY       | Mean Y-axis body acceleration jerk (frequency domain)
+fBodyAccJerkMeanZ       | Mean Z-axis body acceleration jerk (frequency domain)
+fBodyGyroMeanX          | Mean X-axis body angular velocity (frequency domain)
+fBodyGyroMeanY          | Mean Y-axis body angular velocity (frequency domain)
+fBodyGyroMeanZ          | Mean Z-axis body angular velocity (frequency domain)
+fBodyAccMagMean         | Mean Euclidean magnitude of body acceleration (frequency domain)
+fBodyAccJerkMagMean     | Mean Euclidean magnitude of body acceleration jerk (frequency domain)
+fBodyGyroMagMean        | Mean Euclidean magnitude of body angular velocity (frequency domain)
+fBodyGyroJerkMagMean    | Mean Euclidean magnitude of body angular velocity jerk (frequency domain)
+tBodyAccStdX            | Standard deviation of X-axis body acceleration (time domain)
+tBodyAccStdY            | Standard deviation of Y-axis body acceleration (time domain)
+tBodyAccStdZ            | Standard deviation of Z-axis body acceleration (time domain)
+tGravityAccStdX         | Standard deviation of X-axis gravity acceleration (time domain)
+tGravityAccStdY         | Standard deviation of Y-axis gravity acceleration (time domain)
+tGravityAccStdZ         | Standard deviation of Z-axis gravity acceleration (time domain)
+tBodyAccJerkStdX        | Standard deviation of X-axis body acceleration jerk (time domain)
+tBodyAccJerkStdY        | Standard deviation of Y-axis body acceleration jerk (time domain)
+tBodyAccJerkStdZ        | Standard deviation of Z-axis body acceleration jerk (time domain)
+tBodyGyroStdX           | Standard deviation of X-axis angular velocity (time domain)
+tBodyGyroStdY           | Standard deviation of Y-axis angular velocity (time domain)
+tBodyGyroStdZ           | Standard deviation of Z-axis angular velocity (time domain)
+tBodyGyroJerkStdX       | Standard deviation of X-axis angular velocity jerk (time domain)
+tBodyGyroJerkStdY       | Standard deviation of Y-axis angular velocity jerk (time domain)
+tBodyGyroJerkStdZ       | Standard deviation of Z-axis angular velocity jerk (time domain)
+tBodyAccMagStd          | Standard deviation of Euclidean magnitude of body acceleration (time domain)
+tGravityAccMagStd       | Standard deviation of Euclidean magnitude of gravity acceleration (time domain)
+tBodyAccJerkMagStd      | Standard deviation of Euclidean magnitude of body acceleration jerk (time domain)
+tBodyGyroMagStd         | Standard deviation of Euclidean magnitude of body angular velocity (time domain)
+tBodyGyroJerkMagStd     | Standard deviation of Euclidean magnitude of body angular velocity jerk (time domain)
+fBodyAccStdX            | Standard deviation of X-axis body acceleration (frequency domain)
+fBodyAccStdY            | Standard deviation of Y-axis body acceleration (frequency domain)
+fBodyAccStdZ            | Standard deviation of Z-axis body acceleration (frequency domain)
+fBodyAccJerkStdX        | Standard deviation of X-axis body acceleration jerk (frequency domain)
+fBodyAccJerkStdY        | Standard deviation of Y-axis body acceleration jerk (frequency domain)
+fBodyAccJerkStdZ        | Standard deviation of Z-axis body acceleration jerk (frequency domain)
+fBodyGyroStdX           | Standard deviation of X-axis body angular velocity (frequency domain)
+fBodyGyroStdY           | Standard deviation of Y-axis body angular velocity (frequency domain)
+fBodyGyroStdZ           | Standard deviation of Z-axis body angular velocity (frequency domain)
+fBodyAccMagStd          | Standard deviation of Euclidean magnitude of body acceleration (frequency domain)
+fBodyAccJerkMagStd      | Standard deviation of Euclidean magnitude of body acceleration jerk (frequency domain)
+fBodyGyroMagStd         | Standard deviation of Euclidean magnitude of body angular velocity (frequency domain)
+fBodyGyroJerkMagStd     | Standard deviation of Euclidean magnitude of body angular velocity jerk (frequency domain)
+  
+***
 
