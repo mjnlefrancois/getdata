@@ -73,7 +73,9 @@ The objective of this step was to extract the relevant columns from the ```combi
 2. The final dataset ```sumData``` was created by:
   + Grouping the data using the ```group_by``` function first by Activity, and then by Subject
   + Summarizing the columns using the ```summarise_each``` function, specifying ```mean``` as the only function call (by not specifying ```vars```, the ```summarise_each``` function defaults to summarizing all non-grouping variables)
-3. The final dataset was then exported to the text file ```averages.txt``` in the working directory using the ```write.table()``` function.
+3. The final dataset was then exported to the text file ```averages.txt``` in the working directory using the ```write.table()``` function. This file contained 180 observations and 68 variables.
+
+***
 
 
 
