@@ -47,10 +47,10 @@ Convention    |   Description                       | Category        |
 
 
 ### Descriptions
-The feature variables are averages of each variable for each activity and each subject. They are normalized and bounded within ```[-1, 1]```. The full descriptions of each variable are listed in the table below:
+The feature variables are averages of each variable for each activity and each subject. Acceleration measurements are recorded in standard gravity units 'g', and angular velocity measurements are recorded in radians per second. The variables in this dataset are normalized and bounded within ```[-1, 1]```. The full descriptions of each variable are listed in the table below:
 
-Variable                | Description                                     
------------------------ | -------------------------------------------
+Variable                      | Description                                     
+----------------------------- | -------------------------------------------
 ```tBodyAccMeanX```           | Mean X-axis body acceleration (time domain)
 ```tBodyAccMeanY```           | Mean Y-axis body acceleration (time domain)
 ```tBodyAccMeanZ```           | Mean Z-axis body acceleration (time domain)
