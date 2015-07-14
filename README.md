@@ -36,4 +36,4 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 4. To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column
 
 ### Step 3: Select appropriate variables
-1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined. Hence, these were identified using the ```duplicated()``` command for the names of ```combined```: ```names(combined)```.
+1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined.``` Hence, these were identified using the ```duplicated()``` command for the names of ```combined```: ```names(combined)```.
