@@ -37,14 +37,20 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 
 ### Step 3: Select appropriate variables
 1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined```. Hence, these were identified using the ```duplicated()``` command for the column names of ```combined```: ```names(combined)```. We see that none of these columns contain the means or standard deviations of the measurements.
-  * ```names(combined)[duplicated(names(combined))]```
 2. Hence, these were removed by subsetting the ```combined``` data frame for columns which did not contain duplicated names using the standard ```[``` and ```]``` operators . We obtain a data frame that may then be manipulated using ```select()```.
-  * ```combined[, !duplicated(names(combined))]```
 3. Relevant columns are then selected from ```combined```. These include:
   * Subject
   * Activity
   * ```contains("mean", ignore.case = FALSE)```: All columns that contain the word "mean" to represent measurement means - this is case sensitive to ensure that other irrelevant variables are not included
   * ```contains("std")```: All columns that contain the word "std" to represent measurement standard deviations
   * ```-contains("Freq")```: Excluding columns that contain the word "Freq" to avoid selecting columns containing the ```meanFreq()``` of measurements
-4. For aesthetic purposes, the brackets ```()``` in the variable names were removed using the ```gsub``` function:  
-  *```gsub("\\(|\\)", "", colnames(combined))```
+4. For aesthetic purposes, the brackets ```()``` in the variable names were removed using the ```gsub``` function.
+
+### Step 4: Create final dataset
+1. The ```combined``` data frame was converted to a ```tbl``` object using the ```tbl_df``` function for further manipulation and easy viewing.
+2. The final dataset ```sumData``` was created by:
+  + Grouping the data using the ```group_by``` function first by Activity, and then by Subject
+  + Summarizing the columns using the ```summarise_each``` function, specifying ```mean``` as the only function call (by not specifying ```vars```, the ```summarise_each``` function defaults to summarizing all non-grouping variables)
+3. The final dataset was then exported to the text file ```averages.txt``` in the working directory using the ```write.table()``` function.
+  
+
