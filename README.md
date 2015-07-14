@@ -3,7 +3,7 @@
 ## Introduction
 
 ### Required packages
-Only the ```{r}dplyr``` package is required for this script.
+Only the ```dplyr``` package is required for this script.
 
 ### Overview
 This script performs the following functions in the order listed:
