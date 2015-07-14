@@ -37,14 +37,14 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 
 ### Step 3: Select appropriate variables
 1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined```. Hence, these were identified using the ```duplicated()``` command for the column names of ```combined```: ```names(combined)```. We see that none of these columns contain the means or standard deviations of the measurements.
-  * names(combined)[duplicated(names(combined))]
+  * ```names(combined)[duplicated(names(combined))]```
 2. Hence, these were removed by subsetting the ```combined``` data frame for columns which did not contain duplicated names using the standard ```[``` and ```]``` operators . We obtain a data frame that may then be manipulated using ```select()```.
-  * combined[, !duplicated(names(combined))]
+  * ```combined[, !duplicated(names(combined))]```
 3. Relevant columns are then selected from ```combined```. These include:
   * Subject
   * Activity
   * ```contains("mean", ignore.case = FALSE)```: All columns that contain the word "mean" to represent measurement means - this is case sensitive to ensure that other irrelevant variables are not included
   * ```contains("std")```: All columns that contain the word "std" to represent measurement standard deviations
   * ```-contains("Freq")```: Excluding columns that contain the word "Freq" to avoid selecting columns containing the ```meanFreq()``` of measurements
-4. For aesthetic purposes, the brackets ```()``` in the variable names were removed using the ```gsub``` function:
+4. For aesthetic purposes, the brackets ```()``` in the variable names were removed using the ```gsub``` function:  
   *```gsub("\\(|\\)", "", colnames(combined))```
