@@ -33,4 +33,4 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
   + The subject data (```subtrain``` & ```subtest```) was named "Subject"
 * The training and test data were merged separately in the order: Subject, Activity, Features
 * A new dataset (```combined```) was then created by merging the training (```train```) and test (```test```) data
-* To rename
+* To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the character strings in ```activity_labels.txt``` to the factors in that column
