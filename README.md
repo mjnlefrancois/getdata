@@ -27,5 +27,8 @@ Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt
 Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt``` | ```Xtest```, ```ytest``` & ```subtest```
 
 ### Step 2: Combine Data
-* 
-
+* The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly
+  + The variables in (```Xtrain``` & ```Xtest```) were named by feature (in the ```features``` object)
+  + The activity data (```ytrain``` & ```ytest```) was named "Activity"
+  + The subject data (```subtrain``` & ```subtest```) was named "Subject"
+* The training and test data was merged separately in the order: Subject, Activity, Features
