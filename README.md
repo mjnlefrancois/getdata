@@ -24,10 +24,10 @@ This script performs the following functions in the order listed:
 
        Data        |       File         | Object(s)
 ------------------ | ------------------ | ---------
-Variable names     | ```features.txt``` | ```features```
-Activity labels    | ```activity_labels.txt``` | ```activities```
-Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt``` | ```Xtrain```, ```ytrain``` & ```subtrain```
-Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt``` | ```Xtest```, ```ytest``` & ```subtest```
+Variable names     | ```features.txt``` | ```features``` (character)
+Activity labels    | ```activity_labels.txt``` | ```activities``` (character)
+Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt``` | ```Xtrain```, ```ytrain``` & ```subtrain``` (data frames)
+Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt``` | ```Xtest```, ```ytest``` & ```subtest``` (data frames)
 
 ### Step 2: Combine Data  
 The objective of this step was to create a combined data frame containing all variables from the subject datasets (```subtrain``` & ```subtest```), activity datasets (```ytrain``` & ```ytest```) and feature datasets (```Xtrain``` & ```Xtest```), in that order. The data frame would have descriptive names for each variable (especially the features), and descriptive names for the various activities. It will adopt a wide form, as shown in the table below:  
