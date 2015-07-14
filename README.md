@@ -32,7 +32,8 @@ The objective of this step was to create a combined data frame containing all va
 Activity  | Subject | Feature1  | Feature2  | ... | FeatureN  |
 --------- | ------- | --------- | --------- | --- | --------- |
 WALKING   | 1       | -0.30     | -0.99     | ... | ...       |
-SITTING   | 3       | 0.54      | 0.01      | ... | ...       |
+SITTING   | 1       | 0.54      | 0.01      | ... | ...       |
+SITTING   | 2       | 0.54      | 0.01      | ... | ...       |
 ...       | ...     | ...       | ...       | ... | ...       |
 
 1. The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly:
