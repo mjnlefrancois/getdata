@@ -9,7 +9,7 @@ The ```averages``` dataset comprises 180 observations and 68 variables. The obse
 ## Identifying Variables
 
 ### Subject:
-This numeric variable takes integer values within [1, 30]. Each integer represents a unique participant in the study.
+This numeric variable takes integer values within $[1, 30]$. Each integer represents a unique participant in the study.
 
 ### Activity:
 This factor variable has six levels. It represents the 6 activities performed during the study.
@@ -47,7 +47,7 @@ Convention    |   Description                     | Category        |
 
 
 ### Descriptions
-The feature variables are averages of each variable for each activity and each subject. They are normalized and bounded within ```[-1, 1]```. The full descriptions of each variable are listed in the table below:
+The feature variables are averages of each variable for each activity and each subject. They are normalized and bounded within $[-1, 1]$. The full descriptions of each variable are listed in the table below:
 
 Variable                | Description                                               |
 ----------------------- | --------------------------------------------------------- |
