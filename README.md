@@ -36,4 +36,11 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 4. To use descriptive activity names to name the activities in the data set, the Activities column in ```combined``` was converted to a factor using the ```factor()``` function, specifying ```labels = activities``` to assign the relevant activity names (as character strings) to the appropriate factor in that column
 
 ### Step 3: Select appropriate variables
-1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined.``` Hence, these were identified using the ```duplicated()``` command for the names of ```combined```: ```names(combined)```.
+1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined```. Hence, these were identified using the ```duplicated()``` command for the column names of ```combined```: ```names(combined)```. We see that none of these columns contain the means or standard deviations of the measurements.
+2. Hence, these were removed by subsetting the ```combined``` data frame using the ```[``` and ```]``` operators for columns which did not contain duplicated names. We obtain a data frame that may then be manipulated using ```select()```.
+3. Relevant columns are then selected from ```combined```. These include:
+  * Subject
+  * Activity
+  * All columns that contain the word "mean" to represent measurement means - this is case sensitive to ensure that other irrelevant variables are not included
+  * All columns that contain the word "std" to represent measurement standard deviations
+  * Excluding columns that contain the word "Freq" to avoid selecting columns containing the ```meanFreq()``` of measurements
