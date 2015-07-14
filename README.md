@@ -54,7 +54,7 @@ SITTING   | 2       | 0.54      | 0.01      | ... | ...       |
 ### Step 3: Select appropriate variables  
 The objective of this step was to extract the relevant columns from the ```combined``` data frame and summarize the data. Relevant variables included Subject, Activity, and Features that have both mean and standard deviation (to perform basic statistical analysis).  
 
-#### Procedure
+#### Procedure:
 1. Running the ```select()``` function in ```dplyr``` yields an error: there are duplicate column names in ```combined```. Hence, duplicate column names were identified using the ```duplicated()``` function with ```names(combined)``` as the sole argument. We see that none of these columns contain the means or standard deviations of the measurements.
 2. Hence, these were removed by subsetting the ```combined``` data frame for columns which did not contain duplicated names using the standard ```[``` and ```]``` operators . We obtain a data frame that may then be manipulated using ```select()```.
 3. Relevant columns are then selected from ```combined```. The columns selected were:
@@ -63,7 +63,7 @@ The objective of this step was to extract the relevant columns from the ```combi
   * ```contains("mean", ignore.case = FALSE)```: All columns that contain the word "mean" to represent measurement means - this is case sensitive to ensure that ```gravityMean```, ```tBodyAccMean```, ```tBodyAccJerkMean```, ```tBodyGyroMean``` and ```tBodyGyroJerkMean``` were excluded. Only the mean and not the standard deviation for these variables were given, implying that little statistical analysis can be conducted on these variables. Hence, I decided to exclude these variables from the dataset.
   * ```contains("std")```: All columns that contain the word "std" to represent measurement standard deviations
   * ```-contains("Freq")```: Excluding columns that contain the word "Freq" to avoid selecting columns containing the ```meanFreq()``` of measurements
-4. For aesthetic purposes, the brackets ```()``` in the variable names were removed and naming errors were corrected (```BodyBody``` --> ```body```) using the ```gsub``` function.
+4. For aesthetic purposes, the brackets ```()``` in the variable names were removed and naming errors were corrected (```BodyBody``` --> ```Body```) using the ```gsub``` function.
 
 ### Step 4: Create final dataset
 1. The ```combined``` data frame was converted to a ```tbl``` object using the ```tbl_df``` function for further manipulation and easy viewing.
