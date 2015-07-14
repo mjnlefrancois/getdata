@@ -29,7 +29,12 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
 ### Step 2: Combine Data
 1. The columns in the training and test data frames were renamed in order to use the ```rbind()``` function smoothly:
   + The variables in ```Xtrain``` & ```Xtest``` were named by feature (in the ```features``` object). The variable naming conventions are as follows:
-    + Test 
+    + ```t``` represents the time domain and ```f``` represents the frequency domain
+    + ```Body```/```Gravity``` represents the type of signal recorded (from body and gravity, respectively)
+    + ```Acc``` and ```Gyro``` represent the source of the signal (from the accelerator and the gyroscope, respectively)
+    + ```X```, ```Y```, and ```Z``` represent the axes of movement
+    + ```Jerk``` is included in the variable name if a Jerk signal was recorded
+    + ```Mag``` is included in the variable name if the measurement is in fact the magnitude of the three-dimensional signals
   + The activity data (```ytrain``` & ```ytest```) was named "Activity"
   + The subject data (```subtrain``` & ```subtest```) was named "Subject"
 2. The training and test data were merged separately in the order: Subject, Activity, Features.
@@ -53,7 +58,6 @@ Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt```
   + Grouping the data using the ```group_by``` function first by Activity, and then by Subject
   + Summarizing the columns using the ```summarise_each``` function, specifying ```mean``` as the only function call (by not specifying ```vars```, the ```summarise_each``` function defaults to summarizing all non-grouping variables)
 3. The final dataset was then exported to the text file ```averages.txt``` in the working directory using the ```write.table()``` function.
-  
-## Codebook
+
 
 
