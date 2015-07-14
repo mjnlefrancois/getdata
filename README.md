@@ -19,12 +19,12 @@ This script performs the following functions in the order listed:
 * The ```write.table()``` function was used to import all files, which were ```.txt``` files  
 * The following data was imported from the corresponding files shown in the table below:  
 
-       Data        |       File         | Object
+       Data        |       File         | Object(s)
 ------------------ | ------------------ | ---------
 Variable names     | ```features.txt``` | ```features```
 Activity labels    | ```activity_labels.txt``` | ```activities```
 Training data      | ```X_train.txt```, ```y_train.txt``` & ```subject_train.txt``` | ```Xtrain```, ```ytrain``` & ```subtrain```
-Test data          | 
+Test data          | ```X_test.txt```, ```y_test.txt``` & ```subject_test.txt``` | ```Xtest```, ```ytest``` & ```subtest```
 
 ### Step 2: Combine Data
 * 
