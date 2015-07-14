@@ -3,7 +3,9 @@
 ## Introduction  
 This file provides a brief description of the naming conventions used for the variables in the final output of the script, ```run_analysis.R```.
 
-## Feature Variables
+## Feature Variables  
+The table below describes the naming conventions used for the feature variables. Each feature variable must have a domain, a type, a source and a statistic. It may or may not have a direction, and may have more than one "other" characteristic (Jerk/Mag).
+
 Convention    |   Description                     | Category        |
 ------------- | --------------------------------- | --------------- |
 ```t```       | *Time* domain signals             | Domain          |
